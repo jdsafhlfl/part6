@@ -31,6 +31,9 @@ const reducer = (state = initialState, action) => {
     }
     return state.map(a => a.id === action.anecdoteId ? changeAnecdote : a )
   }
+  else if(action.type === 'add'){
+    return state.concat(action.newAnecdote)
+  }
 
   return state
 }
