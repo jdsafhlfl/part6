@@ -20,6 +20,8 @@ const App = () => {
     dispatch({type:'add', newAnecdote:newAnecdote})
   }
 
+  anecdotes.sort((a,b) => b.votes - a.votes)
+
   return (
     <div>
       <h2>Anecdotes</h2>
