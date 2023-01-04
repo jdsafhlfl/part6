@@ -49,4 +49,11 @@ const createAnecdote = (content) => {
   }
 }
 
-export {reducer, createAnecdote}
+const voteAnecdote = (id) => {
+  return {
+    type: 'vote',
+    anecdoteId: id
+  }
+}
+
+export {reducer, createAnecdote, voteAnecdote}
